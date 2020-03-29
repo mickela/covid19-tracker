@@ -13,8 +13,8 @@ export default function Index() {
         <div className="bg-light" style={{minHeight: '101vh'}}>
             <Navbar/>
             <div className="container">
-                <Search/>
                 <Global/>
+                <Search/>
                 <Consumer>
                     {value =>(
                         <React.Fragment>

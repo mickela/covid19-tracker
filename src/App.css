@@ -1,3 +1,6 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 .App {
   text-align: center;
 }
@@ -19,4 +22,37 @@
 
 .App-link {
   color: #09d3ac;
+}
+.suggestions-form-group{
+  /* position: absolute; */
+}
+.suggestions{
+  background-color: #faebd700;
+  box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+  display: block;
+  /* position: absolute; */
+  z-index: 1;
+  /* left: 0; */
+}
+
+.suggestions > li{
+  list-style: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.suggestions > li:nth-last-of-type(){
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+.suggestions > li:hover{
+  background-color: #29290315;
+}
+.loader{
+  width: 50%;
+}
+@media screen and(max-width: 600px){
+  .loader{
+    width: 70%;
+  }
 }
