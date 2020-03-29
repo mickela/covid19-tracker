@@ -11,7 +11,7 @@ function Country({ active, name, provinceState, confirmed, deaths, recovered, up
                 
                 {/* {provinceState.length > 0 ? <p><b>State:</b> {provinceState} </p> : ''} */}
                 {/* {console.log(provinceState.length)} */}
-                {/* <p><b>State:</b> {provinceState}</p> */}
+                <p><b>State:</b> {provinceState}</p>
 
                 <p><b>Confirmed: </b> {numberWithCommas(confirmed)} </p>
                 <p><b>Deaths: </b> {numberWithCommas(deaths)} </p>

@@ -36,7 +36,7 @@ export default class Provider extends Component {
                 }))
             }
 
-            console.log('data', data);
+            // console.log('data', data);
         })
         .catch(err => {
             console.log(err)
@@ -64,7 +64,7 @@ export default class Provider extends Component {
     }
 
     render() {
-        console.log('state', this.state);
+        // console.log('state', this.state);
         
         return (
             <Context.Provider value={[this.state, this.handleSubmit, this.reload]}>

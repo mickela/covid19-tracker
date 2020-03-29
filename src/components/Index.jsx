@@ -18,7 +18,6 @@ export default function Index() {
                 <Consumer>
                     {value =>(
                         <React.Fragment>
-                            {console.log(value)}
                             <h3 className="text-center p-3">{value[0].heading}</h3>
                             {
                                 value[0].loading === true ? 
@@ -46,7 +45,7 @@ export default function Index() {
             </div>
             <div className="card p-3 m-auto text-center">
                 <p>
-                    Built with a heavy <span role="img" aria-label="heart">💖</span> by <span className="text-danger">Code<span className="text-primary">Maniac.net</span></span>
+                    Built with a heavy <span role="img" aria-label="heart">💖</span> by <a href="https://www.codemaniac.net" rel="noreferrer noopener" className="text-danger">Code<span className="text-primary">Maniac.net</span></a>
                 </p>
             </div>
         </div>
