@@ -5,6 +5,11 @@
     <link rel="icon" href="%PUBLIC_URL%/C.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <script>
+      const { protocol, pathname, hostname } = window.location;
+      // if(protocol === 'http:') window.location = 'https://' + hostname + pathname;
+      // else console.log('on secure protocol');
+    </script>
     <meta name="author" content="CodeManiac.net" />
     <meta name="description" content="Web app created to track covid19 confirmed cases, deaths and recoveries" />
     <link rel="apple-touch-icon" href="C.png" />
