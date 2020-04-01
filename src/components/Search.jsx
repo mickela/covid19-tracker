@@ -18,27 +18,13 @@ class Search extends Component {
 
         let reg = new RegExp(`^${value}`, "i");
         
-        let filteredlist = CountryNames.filter(nation =>( 
-            reg.test(nation)
-        ))
+        let filteredlist = CountryNames.filter(nation => reg.test(nation));
 
         this.setState(()=>({ nations: [...filteredlist] }))
 
-        if(value.length < 1){
-            this.setState(()=>({ nations: [] }))
-        }
+        if(value.length < 1) this.setState(()=>({ nations: [] }));
 
     }
-
-    handleClick = e =>{
-        const { innerText } = e.target;
-
-        this.setState(()=>({
-            country: innerText,
-            nations: []
-        }))
-    }
-
 
     render() {
         const { country, nations } = this.state;
@@ -53,14 +39,22 @@ class Search extends Component {
                                 <div className="suggestions">
                                     {
                                         nations.map(nation =>(
-                                            <li key={i++} onClick={this.handleClick}>{nation}</li>
+                                            <li key={i++} onClick={(e)=>{
+
+                                                this.setState(()=>({
+                                                    country: nation,
+                                                    nations: []
+                                                }))
+                                                value[1](country, e)
+
+                                            }}>{nation}</li>
                                         ))
                                     }
                                   
                                 </div>
                             </div>
                             <div className="form-group">
-                                <button type="submit" className="btn  btn-sm btn-dark">Search</button>
+                                <button type="submit" className="btn btn-sm btn-dark">Search</button>
                             </div>
                         </form>
                         {value[0].heading[0] === 'S' ? <button className="btn btn-sm btn-info" onClick={value[2]} >All Countries</button> : ''}
