@@ -45,7 +45,7 @@ class Search extends Component {
                                                     country: nation,
                                                     nations: []
                                                 }))
-                                                value[1](country, e)
+                                                value[1](nation, e)
 
                                             }}>{nation}</li>
                                         ))
