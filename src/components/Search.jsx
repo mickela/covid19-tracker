@@ -16,13 +16,13 @@ class Search extends Component {
         const { value } = e.target;
         this.setState(()=>({ country: value }))
 
-        let reg = new RegExp(`^${value}`, "i");
+        let reg = new RegExp(`^${value.trim()}`, "i");
         
         let filteredlist = CountryNames.filter(nation => reg.test(nation));
 
         this.setState(()=>({ nations: [...filteredlist] }))
 
-        if(value.length < 1) this.setState(()=>({ nations: [] }));
+        if(value.trim().length < 1) this.setState(()=>({ nations: [] }));
 
     }
 
@@ -32,7 +32,7 @@ class Search extends Component {
         return (
             <Consumer>
                 {value =>(
-                    <div className="card p-5 m-3">
+                    <div className="card p-5 m-3 border-0 shadow">
                         <form onSubmit={(e)=> value[1](country, e) }>
                             <div className="form-group suggestions-form-group">
                                 <input type="text" className="form-control" onChange={this.onChange} value={country} placeholder="Search by country..." />
@@ -57,7 +57,7 @@ class Search extends Component {
                                 <button type="submit" className="btn btn-sm btn-dark">Search</button>
                             </div>
                         </form>
-                        {value[0].heading[0] === 'S' ? <button className="btn btn-sm btn-info" onClick={value[2]} >All Countries</button> : ''}
+                        {value[0].heading[0] === 'S' ? <button className="btn btn-sm btn-info" onClick={value[2]} >Show all countries</button> : ''}
                     </div>
                 )}
             </Consumer>
