@@ -1,5 +1,5 @@
 *{
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: monospace, Courier, Tahoma, sans-serif
 }
 .App {
   text-align: center;
@@ -48,11 +48,39 @@
 .suggestions > li:hover{
   background-color: #29290315;
 }
+.h-50{
+  height: 5000px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.h-50 > h6{
+  font-size: large;
+}
 .loader{
   width: 50%;
 }
+.logo{
+  width: 200px;
+}
+div.card.m-2.p-4.border-0.shadow-sm{
+  width: 370px;
+}
+
+
 @media screen and(max-width: 600px){
   .loader{
     width: 70%;
+  }
+}
+@media screen and (max-width: 900px){
+  .h-50{
+    height: 5000px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+  .global-container{
+    height: 30rem;
+    overflow: hidden;
   }
 }

@@ -19,7 +19,7 @@ export default class Provider extends Component {
         .then(data =>{
             if(type === 'LOAD_COUNTRIES'){
                 this.setState(()=>({
-                    countries: data,
+                    countries: data.Countries,
                     loading: false,
                     heading: 'All Countries'
                 }))
@@ -51,7 +51,8 @@ export default class Provider extends Component {
             loading: true,
             heading: ''
         })
-        this.fetchData('https://covid19.mathdro.id/api/confirmed', 'LOAD_COUNTRIES');
+        // this.fetchData('https://covid19.mathdro.id/api/confirmed', 'LOAD_COUNTRIES');
+        this.fetchData('https://api.covid19api.com/summary', 'LOAD_COUNTRIES');
     }
     componentDidMount(){
         this.reload();
@@ -64,8 +65,6 @@ export default class Provider extends Component {
     }
 
     render() {
-        // console.log('state', this.state);
-        
         return (
             <Context.Provider value={[this.state, this.handleSubmit, this.reload]}>
                 {this.props.children}

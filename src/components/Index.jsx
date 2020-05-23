@@ -18,34 +18,34 @@ export default function Index() {
                 <Consumer>
                     {value =>(
                         <React.Fragment>
-                            <h3 className="text-center p-3">{value[0].heading}</h3>
+                            <h3 className="text-center pt-5">{value[0].heading}</h3> <hr/>
                             {
                                 value[0].loading === true ? 
                                     <Spinner />
                                 :
                                     <div className="row">
-                                        {value[0].countries.map(({ active, confirmed, countryRegion, deaths, lastUpdate, provinceState, recovered }) =>(
+                                        {value[0].countries.map(country =>(
                                             <Country 
                                                 key={i++}
-                                                name={countryRegion} 
-                                                provinceState={provinceState} 
-                                                confirmed={confirmed} 
-                                                deaths={deaths} 
-                                                active={active}
-                                                recovered={recovered} 
-                                                updated={lastUpdate} 
+                                                name={country.Country} 
+                                                confirmed={country.TotalConfirmed} 
+                                                deaths={country.TotalDeaths} 
+                                                recovered={country.TotalRecovered} 
+                                                updated={country.Date} 
+                                                slug={country.Slug}
                                             />
                                         ))}
                                     </div>
                             }
                         </React.Fragment>
                     )}
+      
                 </Consumer>
 
             </div>
-            <div className="card p-3 m-auto text-center">
+            <div className="card p-3 m-auto text-center border-0 shadow-sm">
                 <p>
-                    Built with a heavy <span role="img" aria-label="heart">💖</span> by <a href="https://www.codemaniac.net" rel="noreferrer noopener" className="text-danger">Code<span className="text-primary">Maniac.net</span></a>
+                    Built with a heavy <span role="img" aria-label="heart">❤</span> by <a href="https://www.codemaniac.net" rel="noreferrer noopener" className="text-danger">Code<span className="text-primary">Maniac.net</span></a>
                 </p>
             </div>
         </div>
