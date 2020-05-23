@@ -7,7 +7,9 @@ export default function Navbar() {
                 <div className="text-center m-auto">
                     <ul className="navbar-nav m-auto">      
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#2">#theVirus</a>
+                            <a className="navbar-brand" href="#2" style={{ cursor: 'default' }}>
+                                <img src="logo-color-sm.png" className="logo" alt="#theVirus" />
+                            </a>
                         </li>
                     </ul>
                 </div>
