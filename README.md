@@ -1,4 +1,4 @@
-### Reactjs Covid19-Tracker
+### Reactjs Covid19 Impact Tracker
 
 To get started, run:
 ## `npm install`
