@@ -8,6 +8,7 @@ export default class Provider extends Component {
         super();
         this.state = {
             countries: [],
+            initialList: [],
             loading: true,
             heading: ''
         }
@@ -20,27 +21,15 @@ export default class Provider extends Component {
             if(type === 'LOAD_COUNTRIES'){
                 this.setState(()=>({
                     countries: data.Countries,
+                    initialList: data.Countries,
                     loading: false,
                     heading: 'All Countries'
                 }))
-            }else{
-                const { confirmed, deaths, lastUpdate, recovered } = data;
-                let response = {
-                     confirmed: confirmed.value, provinceState: '', active: '', 
-                     deaths: deaths.value, lastUpdate: lastUpdate.value, recovered: recovered.value, countryRegion: country 
-                }
-                this.setState(()=>({
-                    countries: [response],
-                    loading: false,
-                    heading: `Search Result for ${country}`
-                }))
             }
-
-            // console.log('data', data);
         })
         .catch(err => {
             console.log(err)
-            this.setState(()=>({ loading: false, heading: 'All Countries' }))
+            this.setState(()=>({ loading: false, heading: 'Failed to load resource' }))
             alert("Error: Something isn't right!\n\n*Check your spelling \n*Make sure you have access to the internet");
         })
     }
@@ -51,22 +40,32 @@ export default class Provider extends Component {
             loading: true,
             heading: ''
         })
-        // this.fetchData('https://covid19.mathdro.id/api/confirmed', 'LOAD_COUNTRIES');
         this.fetchData('https://api.covid19api.com/summary', 'LOAD_COUNTRIES');
     }
+
     componentDidMount(){
         this.reload();
     }
 
     handleSubmit = (country, e) =>{
         e.preventDefault();
-        this.setState(()=>({ loading: true, heading: 'Searching...' }))
-        this.fetchData(`https://covid19.mathdro.id/api/countries/${country}`, 'SEARCH_COUNTRY', country)
+        
+        if(country.trim().length > 0){
+            this.setState(()=>({
+                countries: this.state.initialList.filter(x => x.Country === country),
+                heading: `Search Result for ${country}`
+            }))
+        }
+
+    }
+
+    handleReset = () =>{
+        this.setState(()=>({ heading: "All Countries", countries: this.state.initialList }));
     }
 
     render() {
         return (
-            <Context.Provider value={[this.state, this.handleSubmit, this.reload]}>
+            <Context.Provider value={[this.state, this.handleSubmit, this.reload, this.handleReset]}>
                 {this.props.children}
             </Context.Provider>
         )

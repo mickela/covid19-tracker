@@ -22,6 +22,16 @@ export default function Index() {
                             {
                                 value[0].loading === true ? 
                                     <Spinner />
+                                : 
+                                
+                                value[0].heading.includes('Failed')
+                                
+                                ? 
+                                
+                                <div className="text-center m-auto">
+                                    <button className="btn btn-sm btn-warning" onClick={value[2]}>Try Again</button>
+                                </div>
+                                
                                 :
                                     <div className="row">
                                         {value[0].countries.map(country =>(

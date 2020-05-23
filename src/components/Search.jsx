@@ -57,7 +57,7 @@ class Search extends Component {
                                 <button type="submit" className="btn btn-sm btn-dark">Search</button>
                             </div>
                         </form>
-                        {value[0].heading[0] === 'S' ? <button className="btn btn-sm btn-info" onClick={value[2]} >Show all countries</button> : ''}
+                        {value[0].heading[0] === 'S' ? <button className="btn btn-sm btn-info" onClick={value[3]}>Show all countries</button> : ''}
                     </div>
                 )}
             </Consumer>

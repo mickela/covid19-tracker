@@ -1,196 +1,249 @@
-export default `Afghanistan
-Albania
-Algeria
-Andorra
-Angola
-Antigua & Deps
-Argentina
-Armenia
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bhutan
-Bolivia
-Bosnia Herzegovina
-Botswana
-Brazil
-Brunei
-Bulgaria
-Burkina
-Burundi
-Cambodia
-Cameroon
-Canada
-Cape Verde
-Central African Rep
-Chad
-Chile
-China
-Colombia
-Comoros
-Congo
-Congo
-Costa Rica
-Croatia
-Cuba
-Cyprus
-Czech Republic
-Denmark
-Djibouti
-Dominica
-Dominican Republic
-East Timor
-Ecuador
-Egypt
-El Salvador
-Equatorial Guinea
-Eritrea
-Estonia
-Ethiopia
-Fiji
-Finland
-France
-Gabon
-Gambia
-Georgia
-Germany
-Ghana
-Greece
-Grenada
-Guatemala
-Guinea
-Guinea-Bissau
-Guyana
-Haiti
-Honduras
-Hungary
-Iceland
-India
-Indonesia
-Iran
-Iraq
-Ireland
-Israel
-Italy
-Ivory Coast
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Kiribati
-Korea North
-Korea South
-Kosovo
-Kuwait
-Kyrgyzstan
-Laos
-Latvia
-Lebanon
-Lesotho
-Liberia
-Libya
-Liechtenstein
-Lithuania
-Luxembourg
-Macedonia
-Madagascar
-Malawi
-Malaysia
-Maldives
-Mali
-Malta
-Marshall Islands
-Mauritania
-Mauritius
-Mexico
-Micronesia
-Moldova
-Monaco
-Mongolia
-Montenegro
-Morocco
-Mozambique
-Myanmar
-Namibia
-Nauru
-Nepal
-Netherlands
-New Zealand
-Nicaragua
-Niger
-Nigeria
-Norway
-Oman
-Pakistan
-Palau
-Panama
-Papua New Guinea
-Paraguay
-Peru
-Philippines
-Poland
-Portugal
-Qatar
-Romania
-Russian Federation
-Rwanda
-St Kitts & Nevis
-St Lucia
-Saint Vincent & the Grenadines
-Samoa
-San Marino
-Sao Tome & Principe
-Saudi Arabia
-Senegal
-Serbia
-Seychelles
-Sierra Leone
-Singapore
-Slovakia
-Slovenia
-Solomon Islands
-Somalia
-South Africa
-South Sudan
-Spain
-Sri Lanka
-Sudan
-Suriname
-Swaziland
-Sweden
-Switzerland
-Syria
-Taiwan
-Tajikistan
-Tanzania
-Thailand
-Togo
-Tonga
-Trinidad & Tobago
-Tunisia
-Turkey
-Turkmenistan
-Tuvalu
-Uganda
-Ukraine
-United Arab Emirates
-United Kingdom
-Uruguay
-USA
-Uzbekistan
-Vanuatu
-Vatican City
-Venezuela
-Vietnam
-Yemen
-Zambia
-Zimbabwe`.split('\n');
+export default [
+    "Solomon Islands",
+"South Georgia and the South Sandwich Islands",
+"Anguilla",
+"Bahamas",
+"Costa Rica",
+"Falkland Islands (Malvinas)",
+"France",
+"Guinea",
+"United States of America",
+"Bolivia",
+"Bulgaria",
+"Mali",
+"Vanuatu",
+"Sudan",
+"Zimbabwe",
+"Albania",
+"Ecuador",
+"Guernsey",
+"New Zealand",
+"Norway",
+"Pakistan",
+"Denmark",
+"Ghana",
+"Taiwan, Republic of China",
+"Netherlands Antilles",
+"Qatar",
+"Belgium",
+"Cambodia",
+"Holy See (Vatican City State)",
+"Hong Kong, SAR China",
+"Northern Mariana Islands",
+"United Kingdom",
+"Djibouti",
+"Malaysia",
+"Niue",
+"Uganda",
+"Cyprus",
+"French Southern Territories",
+"Liechtenstein",
+"Macao, SAR China",
+"Tuvalu",
+"ALA Aland Islands",
+"Wallis and Futuna Islands",
+"Zambia",
+"Moldova",
+"Saint-Barthélemy",
+"Tunisia",
+"Uruguay",
+"Armenia",
+"French Guiana",
+"Hungary",
+"Algeria",
+"British Indian Ocean Territory",
+"Mayotte",
+"Montserrat",
+"Uzbekistan",
+"Romania",
+"Saudi Arabia",
+"Angola",
+"Aruba",
+"Dominica",
+"Macedonia, Republic of",
+"Tonga",
+"Niger",
+"Puerto Rico",
+"American Samoa",
+"Antarctica",
+"Colombia",
+"Jordan",
+"Micronesia, Federated States of",
+"Somalia",
+"Western Sahara",
+"Slovakia",
+"Grenada",
+"Kuwait",
+"Myanmar",
+"Namibia",
+"Nicaragua",
+"Pitcairn",
+"Heard and Mcdonald Islands",
+"Honduras",
+"Saint-Martin (French part)",
+"Tanzania, United Republic of",
+"Bouvet Island",
+"Chad",
+"Papua New Guinea",
+"Saint Pierre and Miquelon",
+"Sao Tome and Principe",
+"Belarus",
+"Palestinian Territory",
+"Botswana",
+"Portugal",
+"Saint Lucia",
+"US Minor Outlying Islands",
+"Gibraltar",
+"Mongolia",
+"Nigeria",
+"Norfolk Island",
+"Svalbard and Jan Mayen Islands",
+"Lao PDR",
+"Peru",
+"Rwanda",
+"Sierra Leone",
+"Faroe Islands",
+"Greenland",
+"Guyana",
+"Turkmenistan",
+"Burundi",
+"Nepal",
+"New Caledonia",
+"United Arab Emirates",
+"Ukraine",
+"Argentina",
+"Jamaica",
+"Saint Vincent and Grenadines",
+"Monaco",
+"Serbia",
+"South Sudan",
+"Congo (Brazzaville)",
+"Korea (South)",
+"Madagascar",
+"Kyrgyzstan",
+"Cayman Islands",
+"Italy",
+"Senegal",
+"Seychelles",
+"Tokelau",
+"Bosnia and Herzegovina",
+"Georgia",
+"Indonesia",
+"Poland",
+"Suriname",
+"Czech Republic",
+"Saint Helena",
+"South Africa",
+"Swaziland",
+"Yemen",
+"Guadeloupe",
+"Korea (North)",
+"Cameroon",
+"Kazakhstan",
+"Malta",
+"Philippines",
+"Samoa",
+"Belize",
+"Brazil",
+"Cook Islands",
+"Greece",
+"Mauritania",
+"Thailand",
+"Austria",
+"Eritrea",
+"Palau",
+"Turkey",
+"Paraguay",
+"Benin",
+"Congo (Kinshasa)",
+"Luxembourg",
+"Panama",
+"Timor-Leste",
+"China",
+"El Salvador",
+"Guam",
+"Israel",
+"Republic of Kosovo",
+"Cape Verde",
+"Egypt",
+"Mozambique",
+"Canada",
+"Ireland",
+"Tajikistan",
+"Libya",
+"Mexico",
+"Kenya",
+"Togo",
+"Chile",
+"French Polynesia",
+"Saint Kitts and Nevis",
+"Turks and Caicos Islands",
+"Malawi",
+"Afghanistan",
+"Croatia",
+"Fiji",
+"Iceland",
+"Lebanon",
+"Bangladesh",
+"Burkina Faso",
+"Gambia",
+"Latvia",
+"Montenegro",
+"Estonia",
+"Martinique",
+"Switzerland",
+"Spain",
+"Bahrain",
+"Bhutan",
+"Dominican Republic",
+"Germany",
+"Antigua and Barbuda",
+"Australia",
+"Bermuda",
+"Marshall Islands",
+"Barbados",
+"Mauritius",
+"Nauru",
+"Azerbaijan",
+"Central African Republic",
+"San Marino",
+"Virgin Islands, US",
+"Kiribati",
+"Morocco",
+"Equatorial Guinea",
+"Gabon",
+"Maldives",
+"Oman",
+"Singapore",
+"Iran, Islamic Republic of",
+"Isle of Man",
+"Liberia",
+"Sri Lanka",
+"Sweden",
+"British Virgin Islands",
+"Iraq",
+"Lithuania",
+"Côte d'Ivoire",
+"Haiti",
+"Réunion",
+"Christmas Island",
+"Cocos (Keeling) Islands",
+"Guinea-Bissau",
+"Jersey",
+"Trinidad and Tobago",
+"Viet Nam",
+"Brunei Darussalam",
+"Cuba",
+"Ethiopia",
+"Japan",
+"Slovenia",
+"Finland",
+"Guatemala",
+"India",
+"Lesotho",
+"Netherlands",
+"Syrian Arab Republic (Syria)",
+"Andorra",
+"Comoros",
+"Russian Federation",
+"Venezuela (Bolivarian Republic)"];
